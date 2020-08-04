@@ -1,0 +1,25 @@
+{
+  "name": "ganache-filecoin-alpha-cli",
+  "version": "0.0.1",
+  "description": "Alpha CLI for Ganache's Filecoin integration. Will be replaced by ganache-cli once integration is stable.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/trufflesuite/ganache-filecoin-alpha-cli.git"
+  },
+  "keywords": [
+    "ganache",
+    "filecoin",
+    "alpha",
+    "trufflesuite"
+  ],
+  "author": "Tim Coulter",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/trufflesuite/ganache-filecoin-alpha-cli/issues"
+  },
+  "homepage": "https://github.com/trufflesuite/ganache-filecoin-alpha-cli#readme"
+}
