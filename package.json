@@ -21,5 +21,11 @@
   "bugs": {
     "url": "https://github.com/trufflesuite/ganache-filecoin-alpha-cli/issues"
   },
-  "homepage": "https://github.com/trufflesuite/ganache-filecoin-alpha-cli#readme"
+  "homepage": "https://github.com/trufflesuite/ganache-filecoin-alpha-cli#readme",
+  "dependencies": {
+    "bn.js": "^5.1.2",
+    "ts-node": "^8.10.2",
+    "typescript": "^3.9.7",
+    "yargs": "^15.4.1"
+  }
 }
