@@ -4,6 +4,7 @@
   "description": "Alpha CLI for Ganache's Filecoin integration. Will be replaced by ganache-cli once integration is stable.",
   "main": "index.js",
   "scripts": {
+    "postinstall": "cd ./node_modules/ganache-core && npm run tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -24,6 +25,7 @@
   "homepage": "https://github.com/trufflesuite/ganache-filecoin-alpha-cli#readme",
   "dependencies": {
     "bn.js": "^5.1.2",
+    "ganache-core": "git+https://github.com/trufflesuite/ganache-core#ts-filecoin",
     "ts-node": "^8.10.2",
     "typescript": "^3.9.7",
     "yargs": "^15.4.1"

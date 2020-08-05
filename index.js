@@ -1,4 +1,4 @@
-const Ganache = require("../ganache-core/src/packages/core/lib/index");
+const Ganache = require("ganache-core/src/packages/core");
 
 const {argv} = require('yargs')
 
