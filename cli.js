@@ -1,9 +1,10 @@
 #!/usr/bin/env node
+var path = require("path");
 const spawn = require("child_process").spawn;
 
 var args = process.argv.slice(2);
 
-args.unshift("./index.js");
+args.unshift(path.join(__dirname, "index.js"));
 args.unshift("node");
 
 var ganache = spawn("npx", args, {
@@ -21,6 +22,6 @@ ganache.stderr.on('data', (data) => {
   process.stderr.write(data);
 });
 
-ganache.on('close', (code) => {
-  process.exit(code);
-});
+// ganache.on('close', (code) => {
+//   process.exit(code);
+// });
