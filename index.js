@@ -1,4 +1,4 @@
-const Ganache = require("ganache-core/src/packages/core");
+const Ganache = require("ganache-core");
 
 const {argv} = require('yargs')
 
@@ -15,11 +15,12 @@ let options = {
   ipfsPort: argv.ipfsPort || 5001,
   blockTime: argv.tipsetTime || 0,
   seed: argv.seed || undefined,
-  logger: console
+  logger: console,
+  verbose: argv.verbose || false
 }
 let port = argv.port || 7777;
 
-const server = Ganache.default.server(options);
+const server = Ganache.server(options);
 server.listen(port, (e) => {
   if (e) {
     console.log(e);
