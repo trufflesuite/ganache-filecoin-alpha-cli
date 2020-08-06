@@ -1,6 +1,6 @@
 {
   "name": "ganache-filecoin-alpha-cli",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Alpha CLI for Ganache's Filecoin integration. Will be replaced by ganache-cli once integration is stable.",
   "main": "index.js",
   "scripts": {

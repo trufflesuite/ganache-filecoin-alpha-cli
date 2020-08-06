@@ -14,13 +14,15 @@ This is alpha software. We're releasing this version of the CLI to let Filecoin 
 $ npm install ganache-filecoin-alpha-cli
 ```
 
+On Windows, you may need to run the above with the `--ignore-scripts` flag, as Windows has trouble compiling some uneeded dependencies. 
+
 ### Usage
 
 ```
 $ ganache-filecoin-alpha-cli <options>
 ```
 
-This will start a Filecoin simulator on port `7777`, and a connected IPFS server on port `5001`. See options below to change ports used.
+This will start a Filecoin simulator on port `7777` and a connected IPFS server on port `5001`. See options below to change ports used.
 
 ### Command line options
 
@@ -30,7 +32,7 @@ The following options are available when starting the server:
 * `--ipfs-port`: The port to host the connected IPFS server. Default is `5001`
 * `--tipset-time <milliseconds>`: Mine new tipsets on a timer, specified by the number of milliseconds given. Default is `0`. When specified (not `0`), storage proposals will be mined over the course of many tipsets, and tipsets will be mined continously regardless of the presence of storage proposals. When not specified (or `0`), Ganache will mine storage proposals instantly, and will only mine tipsets when storage proposals are processing. 
 * `--seed <seed>`: Seed the random number generator used to create the wallet address and private key. (This will be more useful when more than one account is created.)
-* `--verbose-rpc`: Log JSON RPC requests received and associated responses. 
+* `--verbose`: Log JSON RPC requests received and associated responses. 
 
 ### Example output
 
