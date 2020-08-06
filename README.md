@@ -11,7 +11,7 @@ This is alpha software. We're releasing this version of the CLI to let Filecoin 
 ### Install
 
 ```
-$ npm install ganache-filecoin-alpha-cli
+$ npm install -g ganache-filecoin-alpha-cli
 ```
 
 On Windows, you may need to run the above with the `--ignore-scripts` flag, as Windows has trouble compiling some uneeded dependencies. 
