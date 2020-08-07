@@ -14,7 +14,7 @@ This is alpha software. We're releasing this version of the CLI to let Filecoin 
 $ npm install -g ganache-filecoin-alpha-cli
 ```
 
-On Windows, you may need to run the above with the `--ignore-scripts` flag, as Windows has trouble compiling some uneeded dependencies. 
+On Windows, you may need to run the above with the `--ignore-scripts` flag, as Windows has trouble compiling some optional dependencies. 
 
 ### Usage
 
@@ -84,12 +84,25 @@ Ganache will choose the automining strategy by default, or when `--tipset-time` 
 
 Ganache will mine new tipsets on a timer when `--tipset-time` is non-zero. This strategy is best if you want Ganache to act more like a real Filecoin environment, where storage proposals are mined over time and over the course of many tipsets. As currently implemented, a storage proposal will progress through to the `Active` state over the course of 12 tipsets, receiving a new state change on every new tipset until `Active` is finally reached. Note that the state of a proposal within a real Lotus server doesn't change states so quickly, and it usually spends more time on the `Tranferring` and `Sealing` states. Please let us know if we should simulate that behavior in more detail.
 
+### Supported Methods
+
+* `Filecoin.ChainGetGenesis`
+* `Filecoin.ChainHead`
+* `Filecoin.StateListMiners`
+* `Filecoin.WalletDefaultAddress`
+* `Filecoin.WalletBalance`
+* `Filecoin.ClientStartDeal`
+* `Filecoin.ClientListDeals`
+* `Filecoin.ClientFindData`
+* `Filecoin.ClientHasLocal`
+* `Filecoin.ClientRetrieve`
+
 ### Still under development
 
 Our Filecoin + Ganache integration is in very active development! We're working hard to implement all the features you've come to expect from other flavors of Ganache. On the roadmap for 2020 is the following:
 
 * **Database & persistence.** Ever want to save your development session and come back later? Database support will let you do that, and let you stop your Ganache server without worry.
-* **Snapshotting & reverting.** One feature that can add even further speed up to automated tests is providing snapshotting and reverting. Put shortly, you (and your automated testing frameworks) can snapshot the state of the Ganache database and revert back to that time as needed. This speeds up test runs becuase it prevents the framework from recreating the previous state unecessarily. The speedup, it's yuge!
-* **Websocket support.** The current implementation of Filecoin+Ganache doesn't yet support websockets. It's on the list, and will come very soon. 
+* **Snapshotting & reverting.** One feature that can add even further speed up to automated tests is providing snapshotting and reverting. Put shortly, you (and your automated testing frameworks) can snapshot the state of the Ganache database and revert back to that time as needed. This speeds up test runs becuase it prevents the framework from recreating the previous state unnecessarily. The speedup, it's yuge!
+* **Websocket support.** The current implementation of Filecoin+Ganache doesn't yet support websockets. It's on the list, and will come soon. 
 * **More accounts by default.** Need more than one account? We'll have you covered soon. 
 * **BIP39 mnemonics.** What's a [BIP 39](https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki)? It allows for seed phrases like `witch collapse practice feed shame open despair creek road again ice least` which have long been the hottest way to manage crypto addresses.
