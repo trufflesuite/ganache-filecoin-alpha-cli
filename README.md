@@ -2,6 +2,8 @@
 
 Alpha CLI for Ganache's Filecoin integration. Will be replaced by [ganache-cli](https://github.com/trufflesuite/ganache-cli) once integration is stable.
 
+<img src="https://i.imgur.com/jcGZ8RQ.png" data-canonical-src="https://i.imgur.com/jcGZ8RQ.png" width="600" />
+
 Running `ganache-filecoin-alpha-cli` will start a web server that simulates a full [Lotus](https://docs.lotu.sh/) client. Use this CLI instead of Lotus during development for faster development cycles and instant storage mining. 
 
 ### DISCLAIMER
